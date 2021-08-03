@@ -225,6 +225,47 @@ main {
   .mainColeccionBox img {
     width: 100%; }
 
+.mainPreSale__contenido {
+  display: grid; }
+  .mainPreSale__contenido__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr;
+    grid-template-areas: "video" "contenido";
+    color: black;
+    background-color: #e3f5c8;
+    padding-top: 20px; }
+    .mainPreSale__contenido__container #video1 {
+      width: 95%;
+      justify-self: center; }
+    .mainPreSale__contenido__container__video {
+      grid-area: video;
+      padding-bottom: 5px; }
+    .mainPreSale__contenido__container__contenido {
+      display: grid;
+      grid-template-rows: 1fr 2fr;
+      grid-template-columns: 1fr;
+      grid-template-areas: "titulo" "texto";
+      grid-area: contenido; }
+      .mainPreSale__contenido__container__contenido__titulo {
+        display: flex;
+        grid-area: titulo;
+        font-family: 'MonteCarlo', cursive;
+        font-size: 3rem;
+        font-weight: lighter;
+        letter-spacing: .4rem;
+        padding: 15px;
+        text-align: center;
+        align-items: center; }
+      .mainPreSale__contenido__container__contenido__texto {
+        grid-area: texto;
+        font-family: 'Nunito', sans-serif;
+        font-weight: lighter;
+        font-size: 1rem;
+        letter-spacing: .2rem;
+        padding: 15px;
+        text-align: center; }
+
 #imagenContacto {
   justify-content: center;
   align-items: center; }
@@ -687,7 +728,7 @@ img {
     flex-direction: row;
     grid-template-rows: 1fr;
     justify-content: center;
-    background-color: black; }
+    background-color: white; }
     .mainPreSale .carouselPreSale .carousel1 {
       display: flex;
       grid-area: carousel1;
@@ -704,6 +745,9 @@ img {
       width: 100%; }
     .mainPreSale .carouselPreSale .carousel-item {
       width: 100%; }
+  .mainPreSale #video2 {
+    width: 75%;
+    justify-self: center; }
 
 /* CAROUSEL ↑ */
 /* ↓ SLIDER PROMO BAR ↓ */
@@ -947,6 +991,27 @@ form {
           letter-spacing: .2rem;
           padding: 15px;
           text-align: center; }
+  .mainPreSale__contenido {
+    display: grid; }
+    .mainPreSale__contenido__container {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas: "video" "contenido"; }
+      .mainPreSale__contenido__container__contenido {
+        grid-template-rows: 1fr 2fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: "titulo" "texto";
+        grid-area: contenido; }
+        .mainPreSale__contenido__container__contenido__titulo {
+          grid-area: titulo;
+          font-size: 3rem;
+          letter-spacing: .4rem;
+          padding: 15px; }
+        .mainPreSale__contenido__container__contenido__texto {
+          grid-area: texto;
+          font-size: 1rem;
+          letter-spacing: .2rem;
+          padding: 15px; }
   .backTop {
     font-size: 1.5vw; }
   .body {
@@ -1099,6 +1164,27 @@ form {
           letter-spacing: .2rem;
           padding: 15px;
           text-align: center; }
+  .mainPreSale__contenido {
+    display: grid; }
+    .mainPreSale__contenido__container {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas: "video" "contenido"; }
+      .mainPreSale__contenido__container__contenido {
+        grid-template-rows: 1fr 2fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: "titulo" "texto";
+        grid-area: contenido; }
+        .mainPreSale__contenido__container__contenido__titulo {
+          grid-area: titulo;
+          font-size: 3rem;
+          letter-spacing: .4rem;
+          padding: 15px; }
+        .mainPreSale__contenido__container__contenido__texto {
+          grid-area: texto;
+          font-size: 1rem;
+          letter-spacing: .2rem;
+          padding: 15px; }
   .backTop {
     font-size: 1.5vw; }
   .body {
@@ -1525,6 +1611,27 @@ form {
           letter-spacing: .2rem;
           padding: 15px;
           text-align: center; }
+  .mainPreSale__contenido {
+    display: grid; }
+    .mainPreSale__contenido__container {
+      grid-template-columns: 1fr;
+      grid-template-rows: 2fr 1fr;
+      grid-template-areas: "video" "contenido"; }
+      .mainPreSale__contenido__container__contenido {
+        grid-template-rows: 1fr 2fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: "titulo" "texto";
+        grid-area: contenido; }
+        .mainPreSale__contenido__container__contenido__titulo {
+          grid-area: titulo;
+          font-size: 3rem;
+          letter-spacing: .4rem;
+          padding: 15px; }
+        .mainPreSale__contenido__container__contenido__texto {
+          grid-area: texto;
+          font-size: 1rem;
+          letter-spacing: .2rem;
+          padding: 15px; }
   .backTop {
     font-size: .8vw; }
   .body {
@@ -1692,6 +1799,27 @@ form {
           letter-spacing: .2rem;
           padding: 15px;
           text-align: center; }
+  .mainPreSale__contenido {
+    display: grid; }
+    .mainPreSale__contenido__container {
+      grid-template-columns: 1fr;
+      grid-template-rows: 2fr 1fr;
+      grid-template-areas: "video" "contenido"; }
+      .mainPreSale__contenido__container__contenido {
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: "titulo" "texto";
+        grid-area: contenido; }
+        .mainPreSale__contenido__container__contenido__titulo {
+          grid-area: titulo;
+          font-size: 3rem;
+          letter-spacing: .4rem;
+          padding: 15px; }
+        .mainPreSale__contenido__container__contenido__texto {
+          grid-area: texto;
+          font-size: 1rem;
+          letter-spacing: .2rem;
+          padding: 15px; }
   .body {
     display: grid;
     grid-template-columns: 1fr;
@@ -1853,6 +1981,27 @@ form {
           letter-spacing: .2rem;
           padding: 15px;
           text-align: center; }
+  .mainPreSale__contenido {
+    display: grid; }
+    .mainPreSale__contenido__container {
+      grid-template-columns: 1fr;
+      grid-template-rows: 3fr 1fr;
+      grid-template-areas: "video" "contenido"; }
+      .mainPreSale__contenido__container__contenido {
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: "titulo" "texto";
+        grid-area: contenido; }
+        .mainPreSale__contenido__container__contenido__titulo {
+          grid-area: titulo;
+          font-size: 3rem;
+          letter-spacing: .4rem;
+          padding: 15px; }
+        .mainPreSale__contenido__container__contenido__texto {
+          grid-area: texto;
+          font-size: 1rem;
+          letter-spacing: .2rem;
+          padding: 15px; }
   .body {
     display: grid;
     grid-template-columns: 1fr;
