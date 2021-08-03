@@ -182,7 +182,7 @@ main {
     grid-template-rows: 1fr 1fr;
     grid-template-areas: "video" "contenido";
     color: black;
-    background-color: ivory;
+    background-color: #e3f5c8;
     padding-top: 20px; }
     .mainNew__container #video1 {
       width: 95%;
@@ -230,7 +230,7 @@ main {
   .mainPreSale__contenido__container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 2fr;
+    grid-template-rows: 1fr 3fr;
     grid-template-areas: "video" "contenido";
     color: black;
     background-color: #e3f5c8;
@@ -720,6 +720,10 @@ img {
 /* CAROUSEL ↓ */
 .mainPreSale {
   font-family: 'Nunito',sans-serif; }
+  .mainPreSale__container-fluid {
+    padding-top: unset; }
+    .mainPreSale__container-fluid__banner {
+      margin-top: unset; }
   .mainPreSale img {
     width: 100%;
     vertical-align: middle; }
@@ -728,7 +732,8 @@ img {
     flex-direction: row;
     grid-template-rows: 1fr;
     justify-content: center;
-    background-color: white; }
+    background-color: #e3f5c8;
+    padding-top: 10px; }
     .mainPreSale .carouselPreSale .carousel1 {
       display: flex;
       grid-area: carousel1;
@@ -995,7 +1000,7 @@ form {
     display: grid; }
     .mainPreSale__contenido__container {
       grid-template-columns: 1fr;
-      grid-template-rows: 1fr 1fr;
+      grid-template-rows: 1fr 2fr;
       grid-template-areas: "video" "contenido"; }
       .mainPreSale__contenido__container__contenido {
         grid-template-rows: 1fr 2fr;
@@ -1168,7 +1173,7 @@ form {
     display: grid; }
     .mainPreSale__contenido__container {
       grid-template-columns: 1fr;
-      grid-template-rows: 1fr 1fr;
+      grid-template-rows: 2fr 1fr;
       grid-template-areas: "video" "contenido"; }
       .mainPreSale__contenido__container__contenido {
         grid-template-rows: 1fr 2fr;
