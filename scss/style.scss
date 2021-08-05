@@ -54,8 +54,8 @@ ol, ul {
 .ventana {
     transition: 4s;
     position: fixed;
-    top: 47%;
-    left: 47%;
+    top: 48%;
+    left: 48%;
     margin-left: -18em;
     margin-top: -18em;
     width: 36em;
@@ -73,11 +73,11 @@ ol, ul {
         margin: 0;
     }
     img {
-        width: 120%;
+        width: 110%;
     }
     .btn-close {
         position: relative;
-        left: 67%;
+        left: 58%;
     }
 }
 
@@ -954,6 +954,7 @@ img {
     }
     .modal-body {
         opacity: 70%;
+        text-align: center;
     }
     .modal-footer {
         opacity: 70%;
