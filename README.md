@@ -32,13 +32,13 @@ _No requiere_
 * [GITHUB](https://github.com/) - Repository online
 
 
-## Contribuyendo 🖇️
+<!--## Contribuyendo 🖇️
 
 Por favor lee el [CONTRIBUTING.md](https://gist.github.com/villanuevand/xxxxxx) para detalles de nuestro código de conducta, y el proceso para enviarnos pull requests.
 
 ## Wiki 📖
 
-Puedes encontrar mucho más de cómo utilizar este proyecto en nuestra [Wiki](https://github.com/tu/proyecto/wiki)
+Puedes encontrar mucho más de cómo utilizar este proyecto en nuestra [Wiki](https://github.com/tu/proyecto/wiki)-->
 
 ## Autores ✒️
 
@@ -52,9 +52,9 @@ Este proyecto está bajo la Licencia (DemianKoro) - mira el archivo [LICENSE.md]
 
 ## Expresiones de Gratitud 🎁
 
-* A mi pareja que me apoya y soporta ❤️
-* Al profesor Maximiliano Torreblanca 🤓.
-* A la tutora Ayelen Campot 🤓.
+* A mi pareja que me apoya y me incentiva. ❤️
+* Al profesor Maximiliano Torreblanca. 🤓
+* A la tutora Ayelén Campot. 🤓
 
 ---
 ⌨️ por [DemianKoro](https://github.com/DemianKoro) 😊
