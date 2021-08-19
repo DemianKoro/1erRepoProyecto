@@ -330,6 +330,80 @@ main {
     }
 } 
 
+.mainHome__contenido {
+
+    display: grid;
+
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr ;
+        grid-template-rows: 1fr fr;
+        grid-template-areas: "contenido"
+                             "imagen" ;
+        color: ivory;
+        background-color: none;
+        padding-top: 20px;
+        padding-bottom: 20px;
+      
+        &__imagen03b {
+            img {
+                width: 100%;
+            }
+            grid-area: imagen;
+            justify-self: center;
+            width: 50%;
+            padding: 10px ;
+
+            &__imagen03c {
+                display: none;
+                img {
+                    width: 100%;
+                }
+                grid-area: imagen2;
+                justify-self: center;
+                width: 50%;
+                padding: 10px ;
+            
+            }
+        
+        }
+
+        &__contenido {
+
+            display: grid;
+            grid-template-rows: 0fr 1fr;
+            grid-template-columns: 1fr;
+            grid-template-areas: "titulo"
+                                 "texto";
+            grid-area: contenido;
+
+            &__titulo {
+                display: flex;
+                grid-area: titulo;
+                font-family: 'MonteCarlo', cursive;
+                font-size: 3rem;
+                font-weight: lighter;
+                letter-spacing: .4rem;
+                padding: 15px;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 0px;
+                              
+            }
+            &__texto {
+                grid-area: texto;
+                font-family: 'Nunito', sans-serif;
+                font-weight: lighter;
+                font-size: 1rem;
+                letter-spacing: .2rem;
+                padding: 15px;
+                text-align: center;
+            }
+        }
+
+    }
+} 
+
 #imagenContacto {
     justify-content: center;
     align-items: center;
@@ -549,7 +623,7 @@ img {
                     width: 100%;
                     font-family: 'Nunito', sans-serif;
                     color: $colorTitle;
-                    font-size: 1.2rem;
+                    font-size: .8rem;
                     &__navegadorUl__item {
                         padding: .3rem 0 .3rem 0;
                         letter-spacing: .2rem;
@@ -651,7 +725,7 @@ img {
             letter-spacing: 1vw;
             justify-content: center;
             font-family: 'Nunito', sans-serif;
-            font-size: 3.9vw;
+            font-size: 4.2vw;
             h1 {
                 margin-top: .5rem;
                 font-size: unset;
@@ -1638,6 +1712,51 @@ form {
         }
     }
 
+    .mainHome__contenido {
+
+    
+        &__container {
+            grid-template-columns: 1fr ;
+            grid-template-rows: 1fr fr;
+            padding-top: 20px;
+            padding-bottom: 20px;
+          
+            &__imagen03b {
+                img {
+                    width: 100%;
+                }
+                justify-self: center;
+                width: 35%;
+                padding: 10px ;
+            
+            }
+    
+            &__contenido {
+    
+                grid-template-rows: 0fr 1fr;
+                grid-template-columns: 1fr;
+    
+                &__titulo {
+                    grid-area: titulo;
+                    font-size: 3rem;
+                    letter-spacing: .4rem;
+                    padding: 15px;
+                    justify-content: center;
+                    align-items: center;
+                    margin-bottom: 0px;
+                                  
+                }
+                &__texto {
+                    font-size: 1rem;
+                    letter-spacing: .2rem;
+                    padding: 15px;
+                    text-align: center;
+                }
+            }
+    
+        }
+    } 
+
     .mainPreSale__contenido {
 
         display: grid;
@@ -2328,6 +2447,69 @@ form {
     
         }
     }
+
+    .mainHome__contenido {
+
+    
+        &__container {
+            grid-template-columns: 1fr ;
+            grid-template-rows: 1fr 1fr fr ;
+            grid-template-areas: "contenido"
+                                 "imagen" "imagen2";                  
+            padding-top: 20px;
+            padding-bottom: 20px;
+          
+            &__imagen03b {
+                display: flex;
+                flex-direction: row;
+                img {
+                    width: 100%;
+                    padding: 10px;
+                }
+                justify-content: center;
+                justify-self: center;
+                width: 35%;
+                padding: 10px ;
+                &__imagen03c {
+                    display: flex;
+                    img {
+                        width: 100%;
+                    }
+                    grid-area: imagen2;
+                    justify-self: center;
+                    width: 45%;
+                    padding: 10px ;
+                
+                }
+            
+            }
+
+    
+            &__contenido {
+    
+                grid-template-rows: 0fr 1fr;
+                grid-template-columns: 1fr;
+    
+                &__titulo {
+                    grid-area: titulo;
+                    font-size: 3rem;
+                    letter-spacing: .4rem;
+                    padding: 15px;
+                    justify-content: center;
+                    align-items: center;
+                    margin-bottom: 0px;
+                                  
+                }
+                &__texto {
+                    font-size: 1rem;
+                    letter-spacing: .2rem;
+                    padding: 15px;
+                    text-align: center;
+                }
+            }
+    
+        }
+    } 
 
     .mainPreSale__contenido {
 
