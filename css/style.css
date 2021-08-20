@@ -14,6 +14,9 @@ ol, ul {
   margin: 0;
   padding: 0; }
 
+.mt-5 {
+  margin-top: 1rem !important; }
+
 .ventana {
   transition: 4s;
   position: fixed;
@@ -30,7 +33,7 @@ ol, ul {
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: #3d254d;
+    background-color: #200d2c;
     z-index: -1;
     opacity: .8;
     margin: 0; }
@@ -113,7 +116,7 @@ main {
     width: 67%; }
 
 .mainContacto {
-  background-color: #3d254d;
+  background-color: #200d2c;
   padding: 10px 20px 10px 40px;
   color: white;
   font-family: 'Nunito', sans-serif; }
@@ -189,12 +192,12 @@ main {
       justify-self: center; }
     .mainNew__container__video {
       grid-area: video;
-      padding-bottom: 20px; }
+      padding-bottom: 10px; }
     .mainNew__container__contenido {
       display: grid;
-      grid-template-rows: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
       grid-template-columns: 1fr;
-      grid-template-areas: "titulo" "texto" "texto" "texto";
+      grid-template-areas: "titulo" "texto";
       grid-area: contenido; }
       .mainNew__container__contenido__titulo {
         display: flex;
@@ -255,7 +258,7 @@ main {
         font-weight: lighter;
         letter-spacing: .4rem;
         padding: 15px;
-        text-align: center;
+        justify-content: center;
         align-items: center; }
       .mainPreSale__contenido__container__contenido__texto {
         grid-area: texto;
@@ -264,7 +267,8 @@ main {
         font-size: 1rem;
         letter-spacing: .2rem;
         padding: 15px;
-        text-align: center; }
+        text-align: center;
+        justify-content: center; }
 
 .mainHome__contenido {
   display: grid; }
@@ -318,6 +322,12 @@ main {
         padding: 15px;
         text-align: center; }
 
+.carouselContainer {
+  display: flex;
+  justify-content: center; }
+  .carouselContainer__carousel4 {
+    width: 100%; }
+
 #imagenContacto {
   justify-content: center;
   align-items: center; }
@@ -333,7 +343,7 @@ img {
 /* ↑ estilos que tuve que crear para que boostraps no me pise mi css ↑ */
 /* ↓ estilos que tuve que crear para el estilo del dropdown  ↓ */
 .dropdown-menu {
-  background-color: #3d254d;
+  background-color: #200d2c;
   border: 0px solid rgba(0, 0, 0, 0.15);
   font-size: unset;
   color: white;
@@ -348,7 +358,7 @@ img {
 /* HEADER ↓ */
 .headerBox {
   display: grid;
-  grid-template-rows: 1fr 4fr;
+  grid-template-rows: 2fr 4fr;
   grid-template-areas: "headerBox__promo" "headerBox__filaTitulo";
   grid-area: headerBox;
   background-image: unset; }
@@ -363,7 +373,7 @@ img {
     background-color: black;
     color: blanchedalmond;
     font-family: 'Nunito', sans-serif;
-    font-size: 2vw;
+    font-size: 2.5vw;
     text-align: center;
     letter-spacing: .4vw;
     width: 100%;
@@ -502,7 +512,7 @@ img {
             opacity: 100%;
             filter: grayscale(1);
             padding: 1rem;
-            width: 80%;
+            width: 70%;
             transition: .5s; }
           .headerBox__filaTitulo__menu__offcanvas-body__contenedor img:hover {
             opacity: 100%;
@@ -537,7 +547,7 @@ img {
       letter-spacing: 1vw;
       justify-content: center;
       font-family: 'Nunito', sans-serif;
-      font-size: 4.2vw; }
+      font-size: 5.1vw; }
       .headerBox__filaTitulo__titulo h1, .headerBox__filaTitulo__menu__offcanvas-header__titulo h1 {
         margin-top: .5rem;
         font-size: unset;
@@ -776,7 +786,13 @@ img {
   .mainPreSale__container-fluid {
     padding-top: unset; }
     .mainPreSale__container-fluid__banner {
+      display: none;
       margin-top: unset; }
+    .mainPreSale__container-fluid__banner-small {
+      display: flex;
+      margin-top: unset;
+      padding: 0 15px 0 15px;
+      background-color: black; }
   .mainPreSale img {
     width: 100%;
     vertical-align: middle; }
@@ -885,7 +901,7 @@ img {
   bottom: 40px;
   right: 30px;
   z-index: 99;
-  font-size: .6vw;
+  font-size: .4vw;
   font-family: 'Nunito', sans-serif;
   text-transform: uppercase;
   background-color: transparent;
@@ -894,9 +910,11 @@ img {
   opacity: 85%;
   text-shadow: 2px 2px 5px #3d3c3c, 0 0 5px #525150;
   text-align: center;
-  letter-spacing: 1.5px; }
+  letter-spacing: 1.5px;
+  width: 10%; }
   .backTop p {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center; }
 
 .backTop:hover {
@@ -942,7 +960,7 @@ form {
   form #button {
     display: flex;
     flex-direction: row;
-    justify-content: flex-end; }
+    justify-content: center; }
   form select {
     border-color: ivory;
     border-radius: 4px;
@@ -989,6 +1007,25 @@ form {
     width: 40%;
     font-family: 'Nunito', sans-serif;
     text-align: left; }
+  form .btn-secondary {
+    color: black;
+    font-weight: bold;
+    background-color: #ff96ad;
+    border-color: #ff96ad;
+    border-radius: none;
+    width: 30%; }
+  form .btn-secondary:hover {
+    color: #e3f5c8;
+    border: 2px solid #ff96ad;
+    background-color: #ff96ad;
+    border-radius: 6px;
+    box-shadow: 0 0 5px #ff96ad, 0 0 25px #ff96ad, 0 0 50px #ff96ad, 0 0 200px #ff96ad;
+    transform: scaleZ(20);
+    font-weight: lighter;
+    color: #e0e9ba; }
+
+.form-control {
+  border-radius: none !important; }
 
 /* ESTILO TABLA y FORMULARIO ↑ */
 /*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -1005,9 +1042,9 @@ form {
   .mainColeccion {
     z-index: 2;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(9, 1fr);
-    grid-template-areas: "img-1 img-2" "img-3 img-4" "img-5 img-6" "img-7 img-8" "img-9 img-10" "img-11 img-12" "img-13 img-14" "img-15 img-16" "img-17 img-18";
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(18, 1fr);
+    grid-template-areas: "img-1" "img-2" "img-3" "img-4" "img-5" "img-6" "img-7" "img-8" "img-9" "img-10" "img-11" "img-12" "img-13" "img-14" "img-15" "img-16" "img-17" "img-18";
     width: 80%;
     grid-column-gap: 10px;
     grid-row-gap: 10px;
@@ -1018,9 +1055,9 @@ form {
     .mainNew__container {
       display: grid;
       grid-template-columns: 1fr;
-      grid-template-rows: 1fr 1fr 1fr 1fr;
-      grid-template-areas: "video" "contenido" "contenido" "contenido";
-      padding-top: 20px; }
+      grid-template-rows: 1fr 2fr;
+      grid-template-areas: "video" "contenido";
+      padding-top: 10px; }
       .mainNew__container #video1 {
         width: 95%;
         justify-self: center; }
@@ -1047,7 +1084,7 @@ form {
           font-weight: lighter;
           font-size: 1rem;
           letter-spacing: .2rem;
-          padding: 15px;
+          padding: 15px 30px 15px 30px;
           text-align: center; }
   .mainPreSale__contenido {
     display: grid; }
@@ -1064,14 +1101,16 @@ form {
           grid-area: titulo;
           font-size: 3rem;
           letter-spacing: .4rem;
-          padding: 15px; }
+          padding: 15px;
+          justify-content: center; }
         .mainPreSale__contenido__container__contenido__texto {
           grid-area: texto;
           font-size: 1rem;
           letter-spacing: .2rem;
           padding: 15px; }
   .backTop {
-    font-size: 1.5vw; }
+    font-size: .9vw;
+    width: 10%; }
   .body {
     display: grid;
     grid-template-columns: 1fr;
@@ -1086,7 +1125,7 @@ form {
     grid-area: footer; }
   .headerBox {
     display: grid;
-    grid-template-rows: 1fr 4fr;
+    grid-template-rows: 2fr 4fr;
     grid-template-areas: "headerBox__promo" "headerBox__filaTitulo";
     grid-area: headerBox; }
   .nav {
@@ -1202,7 +1241,7 @@ form {
         padding-bottom: 20px; }
       .mainNew__container__contenido {
         display: grid;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: 1fr 2fr;
         grid-template-columns: 1fr;
         grid-template-areas: "titulo" "texto";
         grid-area: contenido; }
@@ -1213,7 +1252,7 @@ form {
           font-weight: lighter;
           letter-spacing: .4rem;
           padding: 15px;
-          text-align: center;
+          justify-content: center;
           align-items: center; }
         .mainNew__container__contenido__texto {
           grid-area: texto;
@@ -1271,7 +1310,8 @@ form {
           letter-spacing: .2rem;
           padding: 15px; }
   .backTop {
-    font-size: 1.5vw; }
+    font-size: .9vw;
+    width: 5%; }
   .body {
     display: grid;
     grid-template-columns: 1fr;
@@ -1544,7 +1584,8 @@ form {
       list-style: none; }
       .headerBox__nav-item {
         color: ivory;
-        opacity: 80%; }
+        opacity: 80%;
+        z-index: 99; }
       .headerBox__nav-item:hover {
         color: #ff96ad; }
       .headerBox__nav .nav-link {
@@ -1676,7 +1717,7 @@ form {
         padding-bottom: 20px; }
       .mainNew__container__contenido {
         display: grid;
-        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
         grid-template-columns: 1fr;
         grid-template-areas: "titulo" "texto" "texto";
         grid-area: contenido; }
@@ -1722,7 +1763,9 @@ form {
           width: 100%; }
     .mainHome__contenido__container__contenido {
       grid-template-rows: 0fr 1fr;
-      grid-template-columns: 1fr; }
+      grid-template-columns: 1fr;
+      width: 60%;
+      justify-self: center; }
       .mainHome__contenido__container__contenido__titulo {
         grid-area: titulo;
         font-size: 3rem;
@@ -1736,6 +1779,8 @@ form {
         letter-spacing: .2rem;
         padding: 15px;
         text-align: center; }
+  .carouselContainer__carousel4 {
+    width: 60%; }
   .mainPreSale__contenido {
     display: grid; }
     .mainPreSale__contenido__container {
@@ -1756,9 +1801,12 @@ form {
           grid-area: texto;
           font-size: 1rem;
           letter-spacing: .2rem;
-          padding: 15px; }
+          padding: 15px;
+          justify-self: center;
+          width: 60%; }
   .backTop {
-    font-size: .8vw; }
+    font-size: .7vw;
+    width: 5%; }
   .body {
     display: grid;
     grid-template-columns: 1fr;
@@ -1924,6 +1972,16 @@ form {
           letter-spacing: .2rem;
           padding: 15px;
           text-align: center; }
+  .carouselContainer__carousel4 {
+    width: 40%; }
+  .mainPreSale__container-fluid {
+    padding-top: unset; }
+    .mainPreSale__container-fluid__banner {
+      display: flex;
+      margin-top: unset; }
+    .mainPreSale__container-fluid__banner-small {
+      display: none;
+      margin-top: unset; }
   .mainPreSale__contenido {
     display: grid; }
     .mainPreSale__contenido__container {
