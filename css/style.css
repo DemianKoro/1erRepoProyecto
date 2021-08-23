@@ -185,7 +185,7 @@ main {
     grid-template-rows: 1fr 1fr;
     grid-template-areas: "video" "contenido";
     color: black;
-    background-color: #e3f5c8;
+    background-color: #BE54FF;
     padding-top: 20px; }
     .mainNew__container #video1 {
       width: 95%;
@@ -236,7 +236,7 @@ main {
     grid-template-rows: 1fr 3fr;
     grid-template-areas: "video" "contenido";
     color: black;
-    background-color: #e3f5c8;
+    background-color: #BE54FF;
     padding-top: 20px; }
     .mainPreSale__contenido__container #video1 {
       width: 95%;
@@ -801,7 +801,7 @@ img {
     flex-direction: row;
     grid-template-rows: 1fr;
     justify-content: center;
-    background-color: #e3f5c8;
+    background-color: #BE54FF;
     padding-top: 10px; }
     .mainPreSale .carouselPreSale .carousel1 {
       display: flex;
@@ -1015,7 +1015,7 @@ form {
     border-radius: none;
     width: 30%; }
   form .btn-secondary:hover {
-    color: #e3f5c8;
+    color: #BE54FF;
     border: 2px solid #ff96ad;
     background-color: #ff96ad;
     border-radius: 6px;
@@ -1109,7 +1109,7 @@ form {
           letter-spacing: .2rem;
           padding: 15px; }
   .backTop {
-    font-size: .9vw;
+    font-size: 2vw;
     width: 10%; }
   .body {
     display: grid;
