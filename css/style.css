@@ -185,7 +185,7 @@ main {
     grid-template-rows: 1fr 1fr;
     grid-template-areas: "video" "contenido";
     color: black;
-    background-color: #BE54FF;
+    background-color: #dd90ca;
     padding-top: 20px; }
     .mainNew__container #video1 {
       width: 95%;
@@ -235,8 +235,8 @@ main {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 3fr;
     grid-template-areas: "video" "contenido";
-    color: black;
-    background-color: #BE54FF;
+    color: ivory;
+    background-color: black;
     padding-top: 20px; }
     .mainPreSale__contenido__container #video1 {
       width: 95%;
@@ -801,7 +801,7 @@ img {
     flex-direction: row;
     grid-template-rows: 1fr;
     justify-content: center;
-    background-color: #BE54FF;
+    background-color: #200d2c;
     padding-top: 10px; }
     .mainPreSale .carouselPreSale .carousel1 {
       display: flex;
@@ -1015,7 +1015,7 @@ form {
     border-radius: none;
     width: 30%; }
   form .btn-secondary:hover {
-    color: #BE54FF;
+    color: #dd90ca;
     border: 2px solid #ff96ad;
     background-color: #ff96ad;
     border-radius: 6px;
@@ -1055,7 +1055,7 @@ form {
     .mainNew__container {
       display: grid;
       grid-template-columns: 1fr;
-      grid-template-rows: 1fr 2fr;
+      grid-template-rows: 0fr 2fr;
       grid-template-areas: "video" "contenido";
       padding-top: 10px; }
       .mainNew__container #video1 {
@@ -1803,7 +1803,7 @@ form {
           letter-spacing: .2rem;
           padding: 15px;
           justify-self: center;
-          width: 60%; }
+          width: 75%; }
   .backTop {
     font-size: .7vw;
     width: 5%; }
@@ -1985,9 +1985,9 @@ form {
   .mainPreSale__contenido {
     display: grid; }
     .mainPreSale__contenido__container {
-      grid-template-columns: 1fr;
-      grid-template-rows: 2fr 1fr;
-      grid-template-areas: "video" "contenido"; }
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+      grid-template-areas: "video contenido"; }
       .mainPreSale__contenido__container__contenido {
         grid-template-rows: 1fr 1fr;
         grid-template-columns: 1fr;
@@ -1995,7 +1995,7 @@ form {
         grid-area: contenido; }
         .mainPreSale__contenido__container__contenido__titulo {
           grid-area: titulo;
-          font-size: 3rem;
+          font-size: 5rem;
           letter-spacing: .4rem;
           padding: 15px; }
         .mainPreSale__contenido__container__contenido__texto {
@@ -2167,9 +2167,9 @@ form {
   .mainPreSale__contenido {
     display: grid; }
     .mainPreSale__contenido__container {
-      grid-template-columns: 1fr;
-      grid-template-rows: 3fr 1fr;
-      grid-template-areas: "video" "contenido"; }
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+      grid-template-areas: "video contenido"; }
       .mainPreSale__contenido__container__contenido {
         grid-template-rows: 1fr 1fr;
         grid-template-columns: 1fr;
@@ -2177,7 +2177,7 @@ form {
         grid-area: contenido; }
         .mainPreSale__contenido__container__contenido__titulo {
           grid-area: titulo;
-          font-size: 3rem;
+          font-size: 5rem;
           letter-spacing: .4rem;
           padding: 15px; }
         .mainPreSale__contenido__container__contenido__texto {

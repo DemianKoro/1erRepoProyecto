@@ -284,8 +284,8 @@ main {
         grid-template-rows: 1fr 3fr;
         grid-template-areas: "video"
                              "contenido" ;
-        color: black;
-        background-color: $colorFondoVerde;
+        color: ivory;
+        background-color: $colorBlack;
         padding-top: 20px;
         #video1 {
         
@@ -1104,7 +1104,7 @@ img {
         flex-direction: row;
         grid-template-rows: 1fr;
         justify-content: center;
-        background-color:$colorFondoVerde;
+        background-color: $colorBrand;
         padding-top: 10px;
 
         .carousel1 {
@@ -1440,7 +1440,7 @@ form {
         &__container {
             display: grid;
             grid-template-columns: 1fr ;
-            grid-template-rows: 1fr 2fr;
+            grid-template-rows: 0fr 2fr;
             grid-template-areas: "video"
                                  "contenido"
                                ;
@@ -2615,7 +2615,7 @@ form {
                     letter-spacing: .2rem;
                     padding: 15px;
                     justify-self: center;
-                    width: 60%;
+                    width: 75%;
                 }
             }
     
@@ -2946,10 +2946,9 @@ form {
         display: grid;
         &__container {
 
-            grid-template-columns: 1fr ;
-            grid-template-rows: 2fr 1fr;
-            grid-template-areas: "video"
-                                 "contenido" ;
+            grid-template-columns: 1fr 1fr ;
+            grid-template-rows: 1fr;
+            grid-template-areas: "video contenido" ;
 
     
             &__contenido {
@@ -2963,7 +2962,7 @@ form {
                 &__titulo {
 
                     grid-area: titulo;
-                    font-size: 3rem;
+                    font-size: 5rem;
                     letter-spacing: .4rem;
                     padding: 15px;                                  
                 }
@@ -3273,10 +3272,9 @@ form {
         display: grid;
         &__container {
 
-            grid-template-columns: 1fr ;
-            grid-template-rows: 3fr 1fr;
-            grid-template-areas: "video"
-                                 "contenido" ;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr;
+            grid-template-areas: "video contenido" ;
 
     
             &__contenido {
@@ -3290,7 +3288,7 @@ form {
                 &__titulo {
 
                     grid-area: titulo;
-                    font-size: 3rem;
+                    font-size: 5rem;
                     letter-spacing: .4rem;
                     padding: 15px;                                  
                 }
