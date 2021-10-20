@@ -1,5 +1,3 @@
-
-
 let nombre = 0;
 let precio = 0;
 let cantidadRemeras = 0;
