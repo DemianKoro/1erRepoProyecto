@@ -356,6 +356,14 @@ img {
 /* ↑ estilos que tuve que crear para el estilo del dropdown ↑ */
 /*-------------------------------------------------------------------------------*/
 /* HEADER ↓ */
+#ulList {
+  color: ivory;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  font-family: 'Nunito', sans-serif; }
+
 .headerBox {
   display: grid;
   grid-template-rows: 2fr 4fr;

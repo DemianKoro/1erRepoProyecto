@@ -458,6 +458,15 @@ img {
 
 /* HEADER ↓ */
 
+#ulList {
+    color: ivory;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    font-family: 'Nunito', sans-serif;
+}
+
 .headerBox { 
 
     display: grid;
