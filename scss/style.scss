@@ -458,19 +458,27 @@ img {
 
 /* HEADER ↓ */
 
-#ulList {
+#btnOculto {
+    display: none;
+}
 
-    position: fixed;
-    top: 7rem;
-    right:0rem;
-    padding: 0rem 1rem 0rem 0rem;
-    font-size: .75rem;
+#userP {
+
+    font-size: .65rem;
     color: ivory;
-    display: flex;
+    letter-spacing: .1rem;
+    padding: 0 .5rem 0 0;
+    opacity: 80%;
+    display: grid;
+    grid-area: p;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center;
     font-family: 'Nunito', sans-serif;
+    justify-self: end;
+}
+#userP:hover {
+    color: $colorNeon;
 }
 
 .headerBox { 
@@ -831,12 +839,28 @@ img {
             #ulLogin {
             
                 width: 100%;
-                display: flex;
+                display: grid;
+                grid-template-rows: 1fr 
+                                    1fr;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-areas: "buscador carrito miCuenta"
+                                     "p p p";
                 flex-direction: row;
                 flex-wrap: nowrap;
                 align-items: center;
                 justify-content: space-evenly;
-            
+                justify-items: center;
+                align-self: center;
+                .buscador {
+                    grid-area: buscador;
+                }
+                .carrito {
+                    grid-area: carrito;
+                }
+                .miCuenta {
+                    grid-area: miCuenta;
+                }
+               
             }
 
         }
@@ -1009,7 +1033,7 @@ img {
 
 /*-------------------------------------------------------------------------------*/ 
 
-/* MODAL ↓ */
+/* MODAL Login ↓ */
 
 .modal {
 
@@ -1037,7 +1061,9 @@ img {
 
     .modal-body .btn {
         width: 80%;
-        border-radius: 0;  
+        border-radius: 0;
+        margin: 0;  
+        
     }
     .modal-footer .btn {
         border-radius: 0; 
@@ -1059,11 +1085,16 @@ img {
         opacity: 70%;
     }
     .modal-body {
+        color: $colorBlack;
         opacity: 70%;
         text-align: center;
     }
     .modal-footer {
+        color: ivory;
         opacity: 70%;
+        p {
+            justify-self: center;
+        }
     }
     .modal-body .mb-2 {
         color: ivory;
@@ -1081,6 +1112,36 @@ img {
     .modal-body .btn-primary:hover {
         filter: brightness(1.1);
     }
+
+}
+
+/* MODAL ↑ */
+
+/* MODAL Carrito ↓  */
+
+#exampleModal {
+
+    .modal-content {
+        background-image: url(../img/ImagenColeccion29.jpg);
+    }
+
+    .modal-body {
+        justify-content: right;
+        .input-group {
+            width: 32%;
+        }
+        form {
+            text-align: -webkit-right;
+            
+        }
+        .btn {
+            width: 32%;
+            border-radius: 0;
+            margin: 0;    
+        }
+    }
+ 
+   
 
 }
 
@@ -1378,17 +1439,10 @@ form {
     .btn-secondary {
         color: black;
         font-weight: bold;
-        background-color: $colorNeon;
-        border-color: $colorNeon;
         border-radius: none;
         width: 30%;
     }
 
-    .btn-secondary:hover {
-        color: $colorFondoVerde;
-        @include neon()
-       
-    }
 }
 
 
@@ -2255,12 +2309,28 @@ form {
             #ulLogin {
             
                 width: 100%;
-                display: flex;
+                display: grid;
+                grid-template-rows: 1fr 
+                                    1fr;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-areas: "buscador carrito miCuenta"
+                                     "p p p";
                 flex-direction: row;
                 flex-wrap: nowrap;
                 align-items: center;
                 justify-content: space-evenly;
-            
+                justify-items: center;
+                align-self: center;
+                .buscador {
+                    grid-area: buscador;
+                }
+                .carrito {
+                    grid-area: carrito;
+                }
+                .miCuenta {
+                    grid-area: miCuenta;
+                }
+               
             }
 
         }

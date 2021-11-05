@@ -356,18 +356,25 @@ img {
 /* ↑ estilos que tuve que crear para el estilo del dropdown ↑ */
 /*-------------------------------------------------------------------------------*/
 /* HEADER ↓ */
-#ulList {
-  position: fixed;
-  top: 7rem;
-  right: 0rem;
-  padding: 0rem 1rem 0rem 0rem;
-  font-size: .75rem;
+#btnOculto {
+  display: none; }
+
+#userP {
+  font-size: .65rem;
   color: ivory;
-  display: flex;
+  letter-spacing: .1rem;
+  padding: 0 .5rem 0 0;
+  opacity: 80%;
+  display: grid;
+  grid-area: p;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
-  font-family: 'Nunito', sans-serif; }
+  font-family: 'Nunito', sans-serif;
+  justify-self: end; }
+
+#userP:hover {
+  color: #ff96ad; }
 
 .headerBox {
   display: grid;
@@ -615,11 +622,22 @@ img {
         flex-wrap: nowrap; }
       .headerBox__filaTitulo__login #ulLogin {
         width: 100%;
-        display: flex;
+        display: grid;
+        grid-template-rows: 1fr  1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: "buscador carrito miCuenta" "p p p";
         flex-direction: row;
         flex-wrap: nowrap;
         align-items: center;
-        justify-content: space-evenly; }
+        justify-content: space-evenly;
+        justify-items: center;
+        align-self: center; }
+        .headerBox__filaTitulo__login #ulLogin .buscador {
+          grid-area: buscador; }
+        .headerBox__filaTitulo__login #ulLogin .carrito {
+          grid-area: carrito; }
+        .headerBox__filaTitulo__login #ulLogin .miCuenta {
+          grid-area: miCuenta; }
   .headerBox__nav {
     display: none;
     flex-direction: row;
@@ -726,7 +744,7 @@ img {
 
 /* FOOTER ↑ */
 /*-------------------------------------------------------------------------------*/
-/* MODAL ↓ */
+/* MODAL Login ↓ */
 .modal .login .btn-primary {
   color: unset;
   background-color: unset;
@@ -749,7 +767,8 @@ img {
 
 .modal .modal-body .btn {
   width: 80%;
-  border-radius: 0; }
+  border-radius: 0;
+  margin: 0; }
 
 .modal .modal-footer .btn {
   border-radius: 0; }
@@ -770,11 +789,15 @@ img {
   opacity: 70%; }
 
 .modal .modal-body {
+  color: black;
   opacity: 70%;
   text-align: center; }
 
 .modal .modal-footer {
+  color: ivory;
   opacity: 70%; }
+  .modal .modal-footer p {
+    justify-self: center; }
 
 .modal .modal-body .mb-2 {
   color: ivory;
@@ -791,6 +814,22 @@ img {
 
 .modal .modal-body .btn-primary:hover {
   filter: brightness(1.1); }
+
+/* MODAL ↑ */
+/* MODAL Carrito ↓  */
+#exampleModal .modal-content {
+  background-image: url(../img/ImagenColeccion29.jpg); }
+
+#exampleModal .modal-body {
+  justify-content: right; }
+  #exampleModal .modal-body .input-group {
+    width: 32%; }
+  #exampleModal .modal-body form {
+    text-align: -webkit-right; }
+  #exampleModal .modal-body .btn {
+    width: 32%;
+    border-radius: 0;
+    margin: 0; }
 
 /* MODAL ↑ */
 /* CAROUSEL ↓ */
@@ -1023,19 +1062,8 @@ form {
   form .btn-secondary {
     color: black;
     font-weight: bold;
-    background-color: #ff96ad;
-    border-color: #ff96ad;
     border-radius: none;
     width: 30%; }
-  form .btn-secondary:hover {
-    color: #dd90ca;
-    border: 2px solid #ff96ad;
-    background-color: #ff96ad;
-    border-radius: 6px;
-    box-shadow: 0 0 5px #ff96ad, 0 0 25px #ff96ad, 0 0 50px #ff96ad, 0 0 200px #ff96ad;
-    transform: scaleZ(20);
-    font-weight: lighter;
-    color: #e0e9ba; }
 
 .form-control {
   border-radius: none !important; }
@@ -1582,11 +1610,22 @@ form {
           flex-wrap: nowrap; }
         .headerBox__filaTitulo__login #ulLogin {
           width: 100%;
-          display: flex;
+          display: grid;
+          grid-template-rows: 1fr  1fr;
+          grid-template-columns: 1fr 1fr 1fr;
+          grid-template-areas: "buscador carrito miCuenta" "p p p";
           flex-direction: row;
           flex-wrap: nowrap;
           align-items: center;
-          justify-content: space-evenly; }
+          justify-content: space-evenly;
+          justify-items: center;
+          align-self: center; }
+          .headerBox__filaTitulo__login #ulLogin .buscador {
+            grid-area: buscador; }
+          .headerBox__filaTitulo__login #ulLogin .carrito {
+            grid-area: carrito; }
+          .headerBox__filaTitulo__login #ulLogin .miCuenta {
+            grid-area: miCuenta; }
     .headerBox__nav {
       display: none;
       flex-direction: row;

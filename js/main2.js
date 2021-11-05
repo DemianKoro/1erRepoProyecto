@@ -69,8 +69,10 @@ console.log (productos.length);
 
 function compraRemeras() {
     while(!nombre || nombre == 0 || nombre > 5) {
-        nombre = parseInt(prompt("♦ ¿Qué remera desea comprar? :\n 1: Remera Rayo ($3700).\n 2: Remera Tigre ($3800).\n 3: Remera Lyon ($4000).\n 4: Remera Luna ($4300).\n 5: Remera Sol ($4500).").toUpperCase());
+         nombre = parseInt(prompt("♦ ¿Qué remera desea comprar? :\n 1: Remera Rayo ($3700).\n 2: Remera Tigre ($3800).\n 3: Remera Lyon ($4000).\n 4: Remera Luna ($4300).\n 5: Remera Sol ($4500).").toUpperCase());
+       
     }
+
 
     switch(nombre){
 
@@ -98,6 +100,7 @@ function compraRemeras() {
 
     while(!cantidadRemeras || cantidadRemeras == 0 && cantidadRemeras !="ESC"){
         cantidadRemeras = parseInt(prompt("Remera elegida: "+ nombre + " ♥\n Introduzca la cantidad de " + nombre + " deseada. (Solo números.)"));
+        
     }
 
     return new Producto(nombre, precio);
