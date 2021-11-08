@@ -275,20 +275,28 @@
           
           </select>
           <br>
-          <div class="input-group input-group-sm mb-3">
-            <input type="number" id="cantidad" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
-            <span class="input-group-text" id="inputGroup-sizing-sm" value="" >Cantidad</span>
-          </div>
+          <div class="form__cnt">
+            <div class="form__cnt__1">
 
-          <a href="#">
-          <button type="submit" id="addCompra" class="btn btn-primary">Enviar</button>
-          </a>
+            </div>
+            <div class="form__cnt__2">
+              <p>Elija la cantidad deseada.</p>
+              <div class="input-group input-group-sm mb-3">
+                <input type="number" id="cantidad" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                <span class="input-group-text" id="inputGroup-sizing-sm" value="" >Cantidad</span>
+              </div>
+
+              <a href="#">
+              <button type="submit" id="addCompra" class="btn btn-primary">Enviar</button>
+              </a>
+            </div>
+        </div>
 
         </form>
       </div>
       <div class="modal-footer">
         <p id="mensaje"></p>
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
         <!--<button type="button" class="btn btn-primary">Save changes</button>-->
       </div>
     </div>

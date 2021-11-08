@@ -1,27 +1,46 @@
 
 $(document).ready(()=>{
 
+
     for (let i = 0 ;i< arregloRemera.length ;i++){
 
         let objetoRemera = arregloRemera[i];
 
         let nombre = objetoRemera.getNombre();
         let precio = objetoRemera.getPrecio();
+        let imagen = objetoRemera.getImagen();
        
-
         
         $("#selectorRemeras").append (
 
            `<option class="opcionesRemeras" id="remera${objetoRemera.id}" value="${objetoRemera.id}">${objetoRemera.nombre} ($${objetoRemera.precio})</option>
-            `
-            
+            `    
         )
+        
+        $(`#remera${[objetoRemera.id]}`).click( (e) => {
 
+            $(".form__cnt__1").empty();   
+            $(".form__cnt__1").append(`<image src = "..${objetoRemera.imagen}"></image>`);
+        
+        });
+        
+
+        // $(`#remera${[objetoRemera.id]}`).hover(function(){
+        //     $(".form__cnt__1").append(`<image src = "..${objetoRemera.imagen}"></image>`);
+        // }, function(){
+        //     $(".form__cnt__1").empty();
+        // })
+        
     }
+ 
+
 
     $("#formCarrito").submit(function (e) {
 
+        $("#mensaje").empty();
+
         e.preventDefault();
+
 
         let nombre = parseInt($("#selectorRemeras").val());
         let cantidad = parseInt($("#cantidad").val());
@@ -37,6 +56,7 @@ $(document).ready(()=>{
             if (nombre == [i+1]){
                 nombre = objetoRemera.getNombre();
                 precio = objetoRemera.getPrecio();
+                imagen = objetoRemera.getImagen();
                 cantidad = objetoRemera.setCantidad(cantidad);
                 subTotal= objetoRemera.calcularSubTotal();
                 descuento = objetoRemera.calcularDescuento();
@@ -45,8 +65,7 @@ $(document).ready(()=>{
             }
         }
         
-        console.log(descuento);
-        console.log(arregloRemera);
+        
     
         $("#mensaje").append(
     
@@ -58,10 +77,10 @@ $(document).ready(()=>{
             `
 
         );
+
+      
+
     } )
-
-    
-
 
     
 

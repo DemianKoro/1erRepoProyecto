@@ -2,16 +2,15 @@ $(document).ready (function() {
 
     $("#formulario").submit(function (e) {
 
+        $("#userP").empty();
         e.preventDefault();
 
         if (validarForm()){
                
             console.log(email.value);
             localStorage.setItem("email", email.value);
-            localStorage.setItem("password", password.value);   
-            let user = document.createElement("p");
-            user.textContent = (email.value);
-            userP.appendChild(user);
+            localStorage.setItem("password", password.value); 
+            $("#userP").append(email.value);  
             email.value="";
             password.value="";
             $("#staticBackdrop").modal('hide');
@@ -21,14 +20,13 @@ $(document).ready (function() {
 
     $("#btnOculto").click(function () {
 
+        $("#userP").empty();
         if (validarForm()){
     
             console.log(email.value);
             localStorage.setItem("email", email.value);
-            localStorage.setItem("password", password.value);   
-            let user = document.createElement("p");
-            user.textContent = (email.value);
-            userP.appendChild(user);
+            localStorage.setItem("password", password.value);
+            $("#userP").append(email.value);
             email.value="";
             password.value="";
             $("#staticBackdrop").modal('hide');
@@ -41,14 +39,12 @@ $(document).ready (function() {
 function validarForm () {
 
     if ($("#floatingInput").val().indexOf('@',0) == -1){
-        alert("El campo Email debe tener una dirección de correo valida.");
         $("#floatingInput").focus();
         return false;
 
     }
 
-    if ($("#floatingPassword").val().length < 8 ){
-        alert("La Contraseña debe tener al menos 8 carácteres.");
+    else if ($("#floatingPassword").val().length < 8 ){
         $("#floatingPassword").focus();
         return false;
     }

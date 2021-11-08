@@ -1,10 +1,11 @@
 class Remera {
 
-    constructor(id, nombre, precio) {
+    constructor(id, nombre, precio, imagen) {
 
         this.id = id;
         this.nombre = nombre;
         this.precio = parseFloat(precio);
+        this.imagen = imagen;
         this.vendido = false;
         this.cantidad = parseInt(cantidad);
         this.envio = 0;
@@ -60,6 +61,12 @@ class Remera {
 
         return this.precio;
     }
+
+    getImagen(){
+
+        return this.imagen;
+
+    }
    
     setCantidad(cantidad) {
         this.cantidad = parseInt(cantidad);
@@ -68,13 +75,13 @@ class Remera {
 
 }
 
-let remera1 = new Remera(1, 'Remera Rayo', '3700');
-let remera2 = new Remera(2, 'Remera Tigre', '3800');
-let remera3 = new Remera(3, 'Remera León', '4000');
-let remera4 = new Remera(4, 'Remera Luna', '4300');
-let remera5 = new Remera(5, 'Remera Sol', '4500');
-let remera6 = new Remera(6, 'Remera Puente', '4800');
-let remera7 = new Remera(7, 'Remera Moria', '5000');
+let remera1 = new Remera(1, 'Remera Bolt', '3700', '/img/bolt.png');
+let remera2 = new Remera(2, 'Remera Star', '3800', '/img/star.png');
+let remera3 = new Remera(3, 'Remera Cosmos', '4000', '/img/cosmos.png');
+let remera4 = new Remera(4, 'Remera Moon', '3900', '/img/moon.png');
+let remera5 = new Remera(5, 'Remera Sun', '4100', '/img/sun.png');
+let remera6 = new Remera(6, 'Remera Rainbow', '4200', '/img/rainbow.png');
+let remera7 = new Remera(7, 'Remera Saturn', '3600', '/img/saturn.png');
 
 let arregloRemera = new Array () ;
 arregloRemera.push(remera1);

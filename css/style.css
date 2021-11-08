@@ -822,14 +822,26 @@ img {
 
 #exampleModal .modal-body {
   justify-content: right; }
-  #exampleModal .modal-body .input-group {
-    width: 32%; }
-  #exampleModal .modal-body form {
-    text-align: -webkit-right; }
-  #exampleModal .modal-body .btn {
-    width: 32%;
-    border-radius: 0;
-    margin: 0; }
+  #exampleModal .modal-body .form__cnt {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "1";
+    justify-items: center; }
+    #exampleModal .modal-body .form__cnt__1 {
+      background-color: unset; }
+    #exampleModal .modal-body .form__cnt__2 {
+      font-size: 0.8rem;
+      justify-content: right;
+      text-align: -webkit-right; }
+      #exampleModal .modal-body .form__cnt__2 p {
+        padding: 0 0 .5rem 0; }
+      #exampleModal .modal-body .form__cnt__2 .input-group {
+        width: 80%; }
+      #exampleModal .modal-body .form__cnt__2 .btn {
+        width: 40%;
+        border-radius: 0;
+        margin: 0; }
 
 /* MODAL ↑ */
 /* CAROUSEL ↓ */

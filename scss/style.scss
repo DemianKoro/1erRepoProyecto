@@ -1127,18 +1127,37 @@ img {
 
     .modal-body {
         justify-content: right;
-        .input-group {
-            width: 32%;
-        }
-        form {
-            text-align: -webkit-right;
+       
+        .form__cnt {
+            display: grid;
+            grid-template-rows: 1fr;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: "1"
+                                    ;
+            justify-items: center;                                    
             
+            &__1 {
+                background-color: unset;
+            }
+            &__2 {
+                p{
+                    padding: 0 0 .5rem 0;;
+                }
+                font-size: 0.8rem;
+                justify-content: right;
+                text-align: -webkit-right;
+                .input-group {
+                    width: 80%;
+                }
+                .btn {
+                    width: 40%;
+                    border-radius: 0;
+                    margin: 0;    
+                }
+            }
         }
-        .btn {
-            width: 32%;
-            border-radius: 0;
-            margin: 0;    
-        }
+       
+     
     }
  
    
