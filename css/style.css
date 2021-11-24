@@ -685,6 +685,41 @@ img {
 
 /* HEADER ↑ */
 /*-------------------------------------------------------------------------------*/
+.mainProducto {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr;
+  grid-template-areas: "imagenProducto1"  "carr"; }
+  .mainProducto #divImgProducto {
+    display: flex;
+    text-align: center; }
+  .mainProducto .imagenProducto1 {
+    grid-area: imagenProducto1;
+    margin: .5rem; }
+    .mainProducto .imagenProducto1 img {
+      width: 100%; }
+  .mainProducto .imagenProducto2 {
+    display: none;
+    grid-area: imagenProducto2;
+    margin: .5rem; }
+    .mainProducto .imagenProducto2 img {
+      width: 100%; }
+  .mainProducto .carr {
+    grid-area: carr;
+    background-color: ivory;
+    margin: .5rem .5rem .8rem .5rem; }
+    .mainProducto .carr #encabezado {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      margin: .5rem 0 0 .5rem;
+      font-family: 'nunito'; }
+    .mainProducto .carr__form {
+      color: black;
+      margin: 0 0 0 .5rem; }
+      .mainProducto .carr__form select {
+        color: grey; }
+
 /* FOOTER ↓ */
 .footerBox {
   color: ivory;
@@ -842,6 +877,9 @@ img {
         width: 40%;
         border-radius: 0;
         margin: 0; }
+
+#exampleModal .modal-footer #mensaje {
+  opacity: 0.1; }
 
 /* MODAL ↑ */
 /* CAROUSEL ↓ */
@@ -1206,6 +1244,9 @@ form {
     grid-row-gap: 10px;
     justify-items: center;
     padding: 3vw 0 0 0; }
+    .mainHome #imagenProducto1 {
+      background-color: unset;
+      border: none; }
   .carouselPreSale {
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "carousel1" "carousel3"; }

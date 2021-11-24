@@ -1,87 +1,79 @@
-
 $(document).ready(()=>{
 
 
-    for (let i = 0 ;i< arregloRemera.length ;i++){
-
-        let objetoRemera = arregloRemera[i];
-
-        let nombre = objetoRemera.getNombre();
-        let precio = objetoRemera.getPrecio();
-        let imagen = objetoRemera.getImagen();
-       
-        
-        $("#selectorRemeras").append (
-
-           `<option class="opcionesRemeras" id="remera${objetoRemera.id}" value="${objetoRemera.id}">${objetoRemera.nombre} ($${objetoRemera.precio})</option>
-            `    
-        )
-        
-        $(`#remera${[objetoRemera.id]}`).click( (e) => {
-
-            $(".form__cnt__1").empty();   
-            $(".form__cnt__1").append(`<image src = "..${objetoRemera.imagen}"></image>`);
-        
-        });
-        
-
-        // $(`#remera${[objetoRemera.id]}`).hover(function(){
-        //     $(".form__cnt__1").append(`<image src = "..${objetoRemera.imagen}"></image>`);
-        // }, function(){
-        //     $(".form__cnt__1").empty();
-        // })
-        
-    }
- 
+      // iteracion para pagina de producto y carrito
 
 
-    $("#formCarrito").submit(function (e) {
+      for (let i = 0 ;i< arregloProducto.length ;i++){
 
-        $("#mensaje").empty();
+         let nombre = parseInt($("#imagenProducto").val());
+         let cantidad = parseInt($("#cantidad").val());
+         
+         let objetoProducto = arregloProducto[i];
 
-        e.preventDefault();
+         //let nombre = objetoProducto.getNombre();
+         let precio = objetoProducto.getPrecio();
+         let descripcion = objetoProducto.getDescripcion();
+         let imagen = objetoProducto.getImagen();
+
+         if (nombre == [i+1]){
+            nombre = objetoProducto.getNombre();
+            precio = objetoProducto.getPrecio();
+            descripcion = objetoProducto.getDescripcion();
+            imagen = objetoProducto.getImagen();
+            cantidad = objetoProducto.setCantidad(cantidad);
+            subTotal= objetoProducto.calcularSubTotal();
+            descuento = objetoProducto.calcularDescuento();
+            envio = objetoProducto.calcularEnvio();
+            total = objetoProducto.calcularTotal();
+         }
+
+         
+      } 
 
 
-        let nombre = parseInt($("#selectorRemeras").val());
-        let cantidad = parseInt($("#cantidad").val());
-        let subTotal = 0;
-        let descuento = 0;
-        let envio = 0;
-        let total = 0;
-        
-        for (let i = 0 ;i< arregloRemera.length ;i++){
-
-            let objetoRemera = arregloRemera[i];
-
-            if (nombre == [i+1]){
-                nombre = objetoRemera.getNombre();
-                precio = objetoRemera.getPrecio();
-                imagen = objetoRemera.getImagen();
-                cantidad = objetoRemera.setCantidad(cantidad);
-                subTotal= objetoRemera.calcularSubTotal();
-                descuento = objetoRemera.calcularDescuento();
-                envio = objetoRemera.calcularEnvio();
-                total = objetoRemera.calcularTotal();
-            }
-        }
-        
-        
+      let deJSon = sessionStorage.getItem("prod");
+      console.log(deJSon);
+      let objetoProducto = JSON.parse(deJSon);
+      console.log(objetoProducto);
     
-        $("#mensaje").append(
-    
-            `<p> ♦ Usted compró ${cantidad} unidades de ${nombre} por un Subtotal de $${subTotal}.<p>
-             <p> ♦ Descuento 10% OFF (Llevando dos o más remeras): $${descuento}<p>
-             <p> ♦ IVA 21%: $${(subTotal)*0.21}<p>
-             <p> ♦ Valor del Envio: $${envio}<p>
-             <p> ♦ Total $${total}<p>
-            `
 
-        );
+      $("#divImgProducto").append(
+         `<div id="carouselProd" class="carouselProd carousel slide" data-bs-ride="carousel">
+         <div class="carousel-indicators">
+           <button type="button" data-bs-target="#carouselProd" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
+           <button type="button" data-bs-target="#carouselProd" data-bs-slide-to="1" aria-label="Slide 2" class="active" aria-current="true"></button>
+           <button type="button" data-bs-target="#carouselProd" data-bs-slide-to="2" aria-label="Slide 3" class=""></button>
+         </div>
+         <div class="carousel-inner">
+           <div class="carousel-item">
+               <img id="imagenProducto${objetoProducto.id}" src="../img/image0${objetoProducto.id}.jpg" value="${objetoProducto.id}" alt="imagen0${objetoProducto.id}">
+           </div>
+           <div class="carousel-item active">
+               <img id="imagenProducto${objetoProducto.id}b" src="../img/image0${objetoProducto.id}b.jpg" value="${objetoProducto.id}" alt="imagen0${objetoProducto.id}b">
+           </div>
+           <div class="carousel-item">
+               <img id="imagenProducto${objetoProducto.id}b" src="../img/image0${objetoProducto.id}c.jpg" value="${objetoProducto.id}" alt="imagen0${objetoProducto.id}c">
+           </div>
+         </div>
+         <button class="carousel-control-prev" type="button" data-bs-target="#carouselProd" data-bs-slide="prev">
+           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+           <span class="visually-hidden">Previous</span>
+         </button>
+         <button class="carousel-control-next" type="button" data-bs-target="#carouselProd" data-bs-slide="next">
+           <span class="carousel-control-next-icon" aria-hidden="true"></span>
+           <span class="visually-hidden">Next</span>
+         </button>
+         </div>`
+      )
+
+         $("#encabezado").append(
+            `<h1 id="nombreProducto${objetoProducto.id}" value="${objetoProducto.id}">${objetoProducto.nombre}</h1>
+            <h2 id="precioProducto${objetoProducto.id}">$${objetoProducto.precio}</h2>`
+         )
 
       
 
-    } )
-
-    
+  
 
 })
