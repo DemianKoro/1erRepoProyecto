@@ -147,7 +147,7 @@
         <li class="headerBox__nav__navegadorUl__item"><a href="contacto.html" >CONTACTO</a></li>
       </ul>
     </nav>
-</header>   
+</header>    
 <!--HEADER ↑ NAV-->   
 <!--MAIN ↓--> 
    <main>
@@ -162,8 +162,15 @@
               
             </div>
             <form class="carr__form" id="carrForm">
+              <select name="talles" id="" class="carr__form__talles">
+                <option value="">Talle</option>
+                <option value="5413" price="0">XS</option>
+                <option value="5414" price="0">S</option>
+                <option value="5804" price="0">M</option>
+                <option value="5415" price="0">L</option>
+              </select>
               <span class="carr__form__span" id="SpanInputCantidad" value="" >Cantidad</span>
-              <select name="qty" id="cantidad" class="carr__form__inputCantidad">
+              <select name="qty" id="cantidad2" class="carr__form__inputCantidad">
                 <option value="1" selected="">01</option>
                 <option value="2">02</option>
                 <option value="3">03</option>
@@ -175,6 +182,49 @@
                 <option value="9">09</option>
                 <option value="10">10</option>
               </select>
+              <a id="botonTalle" class="carr__form__guiaBtn">Guía de Talles</a>
+              <div id="comprar" class="carr__form__comprar">
+                <button type="button" onclick=""class="carr__form__comprar__btn">Comprar</button>
+                <a href="" onclick="" id=""></a>
+              </div>
+              <div class="carr__form__detalles" id="detalles">
+
+
+                <h3 class="carr_form__detalles__abierto" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">Detalles del producto. </h3>
+                <div class="carr__form__descripcion" id="descripcion">
+                  
+                </div>
+                <h5 class="carr_form__detalles__abierto" data-bs-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample2">Referencia Modelo. + </h5>
+                <div class="collapse" id="collapseExample2">
+                  <div class="card card-body">
+                  <p itemprop="descripcion">La modelo esta usando Talle: SMALL Altura: 1,67 // Contorno de busto: 85 cm // Contorno de cintura: 66 cm // Contorno de cadera: 90 cm</p>
+                  </div>
+                </div>
+                <h5>Material y Cuidados</h5>
+                <div>
+
+                </div>
+                <h5 class="carr_form__detalles__abierto" data-bs-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample3">Envío y formas de pago. + </h5>
+                <div class="collapse" id="collapseExample3">
+                  <div class="card card-body">
+                  <p itemprop="descripcion"><p>El <strong>envío</strong> se realiza a través del correo Andreani, a domicilio, sucursal, o retiro en nuestros locales. Para más información consulta <a href="../html/contacto.html">aquí</a></p><p>El <strong>pago</strong> puede efectuarse a través de Mercado Pago, o con tarjetas emitidas en el país.</p><p class="banco"></p>
+                  </div>
+                </div>
+                <div>
+                    <span>Hasta 12 cuotas sin interés de $&nbsp;344					con Ahora12 todos los días </span>
+                    </p>
+                </div>
+                <h5 class="carr_form__detalles__abierto" data-bs-toggle="collapse" href="#collapseExample4" role="button" aria-expanded="false" aria-controls="collapseExample4">Cambios y devoluciones. + </h5>
+                <div class="collapse" id="collapseExample4">
+                  <div class="card card-body">
+                    <p><span>Los cambios se realizan temporada por temporada y el valor de la prenda se respeta por 30 días desde que se efectuó la compra.</span></p>
+                    <p>Se pueden realizar <strong>devoluciones</strong> dentro de los 30 días de efectuada la compra.&nbsp;Siempre se tomará el precio abonado.</p>
+                    <p><span><span>En ambos casos, los artículos deben conservar todas las etiquetas y estar en perfecto estado.</span></span></p>
+                    <p>Para más información, hace click <a title="Cambios y Devoluciones" href="../html/contacto.html" target="_blank">aquí</a></p>
+                  </div>               
+                </div>
+
+              </div>
               <!--<input type="number" id="cantidad" class="carr__form__inputCantidad" aria-label="" aria-describedby="">-->
             </form>
         </div>
@@ -245,41 +295,40 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Carrito de compras vacío.</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <h5 class="modal-title" id="exampleModalLabel">♦ ¿Qué remera desea comprar?</h5>
+        <button type="button" id="cerrar" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-md-4"></div>
-            <div class="col-md-4">.col-md-4</div>
-            <div class="col-md-4 ms-auto">.col-md-4 .ms-auto</div>
-          </div>
-          <div class="row">
-            <div class="col-md-3 ms-auto">.col-md-3 .ms-auto</div>
-            <div class="col-md-2 ms-auto">.col-md-2 .ms-auto</div>
-          </div>
-          <div class="row">
-            <div class="col-md-6 ms-auto">.col-md-6 .ms-auto</div>
-          </div>
-          <div class="row">
-            <div class="col-sm-9">
-              Level 1: .col-sm-9
-              <div class="row">
-                <div class="col-8 col-sm-6">
-                  Level 2: .col-8 .col-sm-6
-                </div>
-                <div class="col-4 col-sm-6">
-                  Level 2: .col-4 .col-sm-6
-                </div>
-              </div>
+
+        <form id=formCarrito>
+ 
+          <select id="selectorRemeras" class="form-select" multiple aria-label="multiple select example">
+          
+          </select>
+          <br>
+          <div class="form__cnt">
+            <div class="form__cnt__1">
+
             </div>
-          </div>
+            <div class="form__cnt__2">
+              <p>Elija la cantidad deseada.</p>
+              <div class="input-group input-group-sm mb-3">
+                <input type="number" id="cantidad" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+                <span class="input-group-text" id="inputGroup-sizing-sm" value="" >Cantidad</span>
+              </div>
+              <div class="validarMsj"></div>
+
+              <a href="#">
+              <button type="submit" id="addCompra" class="btn btn-primary">Enviar</button>
+              </a>
+            </div>
         </div>
+
+        </form>
       </div>
       <div class="modal-footer">
-        <p>No hay productos en tus compras. Click aquí para seguir comprando.</p>
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <p id="mensaje"></p>
+        <button type="button" id="cerrar2" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
         <!--<button type="button" class="btn btn-primary">Save changes</button>-->
       </div>
     </div>
@@ -328,6 +377,9 @@
 <!--FOOTER ↑-->
 <!--SCRIPT ↓--> 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="../js/colores.js"></script>
+<script src="../js/remeras.js"></script> 
+<script src="../js/simulador.js"></script> 
 <script src="../js/productos.js"></script>
 <script src="../js/carrito.js"></script>
 <script src="../js/login.js"></script>

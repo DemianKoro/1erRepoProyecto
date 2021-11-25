@@ -71,6 +71,14 @@ $(document).ready(()=>{
             `<h1 id="nombreProducto${objetoProducto.id}" value="${objetoProducto.id}">${objetoProducto.nombre}</h1>
             <h2 id="precioProducto${objetoProducto.id}">$${objetoProducto.precio}</h2>`
          )
+         $("#descripcion").append(
+            `<div class="collapse" id="collapseExample">
+            <div class="card card-body">
+            <p itemprop="descripcion">${objetoProducto.descripcion}</p>
+            </div>
+          </div>`
+            
+         )
 
       
 

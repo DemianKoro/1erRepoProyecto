@@ -1,5 +1,6 @@
-  $(document).ready(()=>{
+ window.onload = () =>{
 
+    setTimeout(() => { 
     
         //para append de las 3 imagenes del Home
        
@@ -36,7 +37,8 @@
 
             })
 
-     }
+        }
 
-    
-})
+    }, 1000);
+
+}
