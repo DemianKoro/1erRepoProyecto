@@ -10,7 +10,7 @@ class Producto {
         this.stock = item.stock;
         this.tipo = item.tipo;
         this.vendido = false;
-        this.cantidad = parseInt(cantidad);
+        //this.cantidad = parseInt(cantidad);
         this.envio = 0;
         this.subTotal = 0;
         this.descuento = 0;

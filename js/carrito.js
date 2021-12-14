@@ -77,9 +77,10 @@ $(document).ready(()=>{
             <p itemprop="descripcion">${objetoProducto.descripcion}</p>
             </div>
           </div>`
-            
          )
-
+         $("#cuotas").append(
+            `(Hasta 12 cuotas sin interés de $${objetoProducto.precio/12}!!! Con Ahora12 todos los días! )`
+         )
       
 
   
